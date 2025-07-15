@@ -4,7 +4,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true; // Enable sending cookies with requests
 
-const API_URL = "http://localhost:3000"; // Base URL for your API
+const API_URL = "https://firstfullstack-fr2z.onrender.com"; // Base URL for your API
 
 
 
