@@ -4,7 +4,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true; // Enable sending cookies with requests
 
-const API_URL = "https://firstfullstack-fr2z.onrender.com"; // Base URL for your API
+const API_URL = "https://firstfullstack-z9k2.onrender.com/api"; // Base URL for your API
 
 
 
@@ -24,7 +24,7 @@ export const useAuthStore = create((set) => ({
         set ({ isLoding: true, error: null, message: null });
 
         try {
-            const response = await axios.post(`${API_URL}/api/signup`, {
+            const response = await axios.post(`${API_URL}/signup`, {
                 username,
                 email,
                 password
@@ -45,7 +45,7 @@ export const useAuthStore = create((set) => ({
         set({ isLoding: true, error: null, message: null });
         try {
 
-            const response = await axios.post(`${API_URL}/api/login`, {
+            const response = await axios.post(`${API_URL}/login`, {
                 username,
                 password
             });
@@ -71,7 +71,7 @@ export const useAuthStore = create((set) => ({
             error: null,
         });
         try {
-            const response = await axios.get(`${API_URL}/api/fetch-user`);
+            const response = await axios.get(`${API_URL}/fetch-user`);
             set({
                 user: response.data.user,
                 fetchingUser: false,
@@ -93,7 +93,7 @@ export const useAuthStore = create((set) => ({
     logout: async () => {
         set({ isLoding: true, error: null, message: null });
         try {
-            const response = await axios.post(`${API_URL}/api/logout`);
+            const response = await axios.post(`${API_URL}/logout`);
             const { message } = response.data;
             set({ user: null, isLoding: false, message, error: null });
             return message;
