@@ -11,7 +11,7 @@ import cors from 'cors';
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-const cors = require('cors'); // Import CORS for handling cross-origin requests
+// const cors = require('cors'); // Import CORS for handling cross-origin requests
 
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser()); // Middleware to parse cookies
