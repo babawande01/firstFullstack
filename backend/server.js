@@ -11,6 +11,7 @@ import cors from 'cors';
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
+const cors = require('cors'); // Import CORS for handling cross-origin requests
 
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser()); // Middleware to parse cookies
@@ -18,6 +19,11 @@ app.use(cors({ origin: process.env.CLIENT_URl, credentials: true })); // Enable 
 
 const PORT = process.env.PORT || 3000;
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
+// Middleware to handle CORS preflight requests
 
 app.get('/', (req, res) => {
   res.send('Subscribe to my Channel!');
