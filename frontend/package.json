@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://firstfullstack-z9k2.onrender.com",
+  
 
   "scripts": {
     "dev": "vite",
