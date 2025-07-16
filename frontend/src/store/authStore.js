@@ -3,7 +3,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true; // Enable sending cookies with requests
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://firstfullstack-ggcl.onrender.com/api';
 
 // Zustand store for authentication
 
